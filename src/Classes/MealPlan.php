@@ -2,21 +2,15 @@
 
 namespace App\Classes;
 
-class MealPlan implements \JsonSerializable
+class MealPlan
 {
-    public int $id;
-    public string $name;
-    public string $schoolName;
-    public string $weekOfDelivery;
-    public array $meals;
+    private int $id;
+    private string $name;
+    private string $schoolName;
+    private string $weekOfDelivery;
+    private array $meals;
 
-    function __construct(
-        int    $id,
-        string $name,
-        string $schoolName,
-        string $weekOfDelivery,
-        array  $meals,
-    )
+    function __construct(int $id, string $name, string $schoolName, string $weekOfDelivery, array $meals)
     {
         $this->id = $id;
         $this->name = $name;
@@ -25,8 +19,28 @@ class MealPlan implements \JsonSerializable
         $this->meals = $meals;
     }
 
-    public function jsonSerialize(): array
+    public function getName(): string
     {
-        return get_object_vars($this);
+        return $this->name;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function getSchoolName(): string
+    {
+        return $this->schoolName;
+    }
+
+    public function getWeekOfDelivery(): string
+    {
+        return $this->weekOfDelivery;
+    }
+
+    public function getMeals(): array
+    {
+        return $this->meals;
     }
 }

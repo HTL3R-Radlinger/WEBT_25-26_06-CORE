@@ -1,0 +1,10 @@
+<div class="meal-plan-card">
+    <h2 class="plan-name">{{ plan.name }}</h2>
+    <p class="plan-location">{{ plan.schoolName }} | {{ plan.weekOfDelivery }}</p>
+
+    <div class="meals-container">
+        {% for meal in plan.meals %}
+            {% include 'meal.html.twig' with { 'meal': meal } %}
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home - CORE6{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Home Page</h1>
+    <h2>Catering4Schools GmbH</h2>
+    <img src="https://www.htlrennweg.at/wp-content/uploads/2020/04/htl3r_logo_slogan_transparent.png" alt="Logo">
+
+    <h2>Our Meal Plans</h2>
+    <div class="homepage-meal-plans">
+        {% for plan in meal_plans %}
+            {% include 'meal_plan.html.twig' with { 'plan': plan } %}
+        {% endfor %}
+    </div>
+{% endblock %}
