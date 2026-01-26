@@ -12,7 +12,6 @@ final class HomepageController extends AbstractController
     #[Route('/', name: 'app_homepage')]
     public function index(): Response
     {
-        $meal_plans = MealSeeder::generate();
-        return $this->render('home.html.twig', ['meal_plans' => $meal_plans]);
+        return $this->render('home.html.twig');
     }
 }

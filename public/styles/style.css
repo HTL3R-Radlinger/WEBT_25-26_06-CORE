@@ -15,3 +15,26 @@ body {
     align-items: center;
     padding: 40px 20px;
 }
+
+.meal-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #cfcfcf;
+    font-family: Arial, sans-serif;
+}
+
+.meal-table th,
+.meal-table td {
+    border: 1px solid #cfcfcf;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.meal-table thead th {
+    background-color: #0e1945;
+    font-weight: 600;
+}
+
+.meal-table tbody tr:nth-child(even), .meal-table tbody tr:hover {
+    background-color: #363c55;
+}

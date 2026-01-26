@@ -2,6 +2,8 @@
 
 namespace App\Classes;
 
+use DateTime;
+
 class Meal implements \JsonSerializable
 {
 
@@ -9,21 +11,21 @@ class Meal implements \JsonSerializable
     private string $name;
     private string $allergens;
     private string $nutritionalInfo;
-    private float $price;
+    private DateTime $date;
 
     function __construct(
-        int    $id,
-        string $name,
-        string $allergens,
-        string $nutritionalInfo,
-        float  $price,
+        int      $id,
+        string   $name,
+        string   $allergens,
+        string   $nutritionalInfo,
+        DateTime $date,
     )
     {
         $this->id = $id;
         $this->name = $name;
         $this->allergens = $allergens;
         $this->nutritionalInfo = $nutritionalInfo;
-        $this->price = $price;
+        $this->date = $date;
     }
 
     public function getId(): int
@@ -46,9 +48,9 @@ class Meal implements \JsonSerializable
         return $this->nutritionalInfo;
     }
 
-    public function getPrice(): float
+    public function getDate(): string
     {
-        return $this->price;
+        return $this->date->format('d. M Y');
     }
 
     public function jsonSerialize(): array
