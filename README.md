@@ -11,6 +11,12 @@
   composer install
 ```
 
+To stop
+
+```bash
+  docker compose down --remove-orphans
+```
+
 ## Tips
 
 - `composer require symfony/maker-bundle`
