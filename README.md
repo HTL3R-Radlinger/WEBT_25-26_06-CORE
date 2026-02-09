@@ -1,7 +1,8 @@
 # CORE6
 
 ```bash
-  docker compose up -d
+  docker compose build --pull --no-cache
+  docker compose up --wait
 ```
 
 ```bash
