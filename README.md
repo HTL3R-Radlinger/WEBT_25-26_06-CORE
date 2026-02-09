@@ -6,6 +6,8 @@
 
 ```bash
   docker exec -it webt_25-26_06-core-php-1 bash
+  git config --global --add safe.directory /app
+  composer install
 ```
 
 ## Tips
