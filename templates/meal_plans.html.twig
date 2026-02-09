@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div>
+        {% for plan in meal_plans %}
+            {% include 'mealplan/meal_plan.html.twig' with { 'plan': plan } %}
+        {% endfor %}
+    </div>
+{% endblock %}
