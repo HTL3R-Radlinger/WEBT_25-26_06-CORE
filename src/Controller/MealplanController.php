@@ -30,7 +30,12 @@ final class MealplanController extends AbstractController
     }
 
     // Controller for a specific Mealplan (id is given as route path)
-    #[Route('/menu/{id}', name: 'mealplan_with_id', methods: ['GET'])]
+    #[Route(
+        '/menu/{id}',
+        name: 'mealplan_with_id',
+        requirements: ['id' => '\d+'],
+        methods: ['GET']
+    )]
     public function withId(int $id): Response
     {
         $meal_plans = MealSeeder::generate();

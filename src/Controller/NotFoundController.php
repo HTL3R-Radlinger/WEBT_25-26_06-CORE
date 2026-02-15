@@ -12,6 +12,6 @@ final class NotFoundController extends AbstractController
     #[Route('/notfound', name: 'notfound_page', methods: ['GET'])]
     public function index(): Response
     {
-        return $this->render('notfound.html.twig');
+        return $this->render('error404.html.twig', [], new Response('', 404));
     }
 }
