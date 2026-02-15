@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class NotFoundController extends AbstractController
 {
+    // 404 controller
     #[Route('/notfound', name: 'notfound_page', methods: ['GET'])]
     public function index(): Response
     {

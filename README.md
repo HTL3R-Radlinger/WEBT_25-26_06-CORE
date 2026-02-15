@@ -21,7 +21,16 @@ To stop
 
 - `composer require symfony/maker-bundle`
 - `php bin/console make:controller`
+    - -> erstellt automatisch Controller und Twig template
 - `php bin/console make:entity`
+
+### New Syfony Project
+
+- `composer create-project syfony/skeleton NAME`
+    - -> alle wichtigen dinge für webapp werden installiert
+- `composer req twig`
+- `composer req symfony/orm-pack`
+- `composer req make`
 
 ---
 

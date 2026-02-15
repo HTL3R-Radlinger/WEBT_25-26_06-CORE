@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {#
+    The Twig block "title" allows child templates to override it.
+    If no override is provided, "CORE6" is used as the default.
+    #}
     <title>{% block title %}CORE6{% endblock %}</title> {# text is taken if none provided #}
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
 
+{# Includes the header template. #}
 {% include 'header.html.twig' %}
 
 <main>
+    {#
+    Defines a content block.
+    Child templates that extend this layout will inject their page-specific content here.
+    #}
     {% block content %}{% endblock %}
 </main>
 
+{# Includes the footer template. #}
 {% include 'footer.html.twig' %}
 
 </body>

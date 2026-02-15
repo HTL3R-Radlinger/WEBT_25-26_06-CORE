@@ -2,14 +2,14 @@
 
 namespace App\Controller;
 
-use App\Services\Seeder\MealSeeder;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 final class HomepageController extends AbstractController
 {
-    #[Route('/', name: 'app_homepage')]
+    // root controller
+    #[Route('/', name: 'app_homepage', methods: ['GET'])]
     public function index(): Response
     {
         return $this->render('home.html.twig');

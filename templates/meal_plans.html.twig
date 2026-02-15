@@ -1,9 +1,15 @@
+{# extens base layout (inherits HTML structure #}
 {% extends 'base.html.twig' %}
 
+{# replaces {% block content %} in base #}
 {% block content %}
     <div>
+        {#
+        Loop over the "meal_plans" variable.
+        "meal_plans" is being passed to the template from the controller.
+        Each iteration assigns the current item to the variable "plan".
+        #}
         {% for plan in meal_plans %}
-{#            {% include 'mealplan/meal_plan.html.twig' with { 'plan': plan } %}#}
             <h2 class="plan-name">{{ plan.name }}</h2>
             <a href="/menu/{{ plan.id }}">Inspect Meal</a>
             <p class="plan-location">{{ plan.schoolName }} | {{ plan.weekOfDelivery }}</p>
