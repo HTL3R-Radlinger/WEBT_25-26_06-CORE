@@ -21,6 +21,12 @@ final class HomepageController extends AbstractController
 //                </html>
 //            EOF
 //        );
+//
+//        Set custom header:
+//        $response = new Response();
+//        $response->headers->set('X-Custom-Header', 'value');
+//        return $response;
+
         return $this->render('home.html.twig');
     }
 }
